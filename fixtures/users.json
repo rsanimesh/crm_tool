@@ -1,0 +1,20 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$rRlPc9ph29aleaWwsqqeBt$+AEUU3LnPg16uX+cDVpGnHsyhr2+E4mjKqY36pHhu1M=",
+        "last_login": "2022-05-21T13:21:53.502Z",
+        "is_superuser": true,
+        "username": "rahul",
+        "first_name": "Rahul",
+        "last_name": "Sinha",
+        "email": "rsanimesh@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2022-04-24T14:33:41Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]
