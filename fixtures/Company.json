@@ -1,0 +1,9 @@
+[
+{
+    "model": "core.company",
+    "pk": 1,
+    "fields": {
+        "name": "BLUECHIP"
+    }
+}
+]
