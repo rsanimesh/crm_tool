@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/w3.css">
+  <link rel="shortcut icon" href="/static/favicon.png" type="image/x-icon">
+  <title>ACTIV CRM</title>
+</head>
+
+<body>
+  <div id="id01" class="w3-modal" style="padding-top: 50px">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+      <div class="w3-center">
+        <img src="/static/img_avatar4.png" alt="Avatar" style="width:30%"
+          class="w3-circle w3-margin-top">
+      </div>
+
+      <div class="w3-container">
+        <div id="error" class="w3-panel w3-pale-green" style="display: none;"></div>
+        <div class="w3-section">
+          <label><b>Company</b></label>
+          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Company" id="company"
+            required>
+          <label><b>Username</b></label>
+          <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" id="username"
+            required>
+          <label><b>Password</b></label>
+          <input class="w3-input w3-border" type="password" placeholder="Enter Password" id="password" required>
+          <button onclick="login()" class="w3-button w3-block w3-green w3-section w3-padding">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="/static/jquery.min.js"></script>
+<script src="/static/common_utils.js"></script>
+<script>
+  document.getElementById('id01').style.display = 'block'
+
+  function login(){
+    const company = $("#company").val();
+    const username = $("#username").val();
+    const password = $("#password").val();
+    console.log(company, username,password);
+    
+    $.ajax({
+      url: "/crm/v1/token-login",
+      type: "POST",
+      data: {company:company, username:username, password:password},
+      success: function(result, status, xhr){
+        console.log(result, status);
+        if (status==="success"){
+          createItem("token",result.token);
+          createItem("role",result.role);
+          createItem("name",result.name);
+          createItem("company",result.company);
+          window.location.href = "/dashboard";
+        }
+      },
+      error: function(request,status,errorThrown) {
+       console.log(request.responseJSON.error);
+       $("#error").html(request.responseJSON.error);
+       $("#error").show();
+   }
+    })
+  }
+</script>
+
+</html>
