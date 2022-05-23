@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACTIV CRM</title>
+    <link rel="stylesheet" href="/static/w3.css">
+    <link rel="stylesheet" href="/static/common.css">
+    <link rel="shortcut icon" href="/static/favicon.png" type="image/x-icon">
+
+    <script src="/static/ag-grid/ag-grid-community.min.noStyle.js"></script>
+    <link rel="stylesheet" href="/static/ag-grid/ag-grid.css">
+    <link rel="stylesheet" href="/static/ag-grid/ag-theme-alpine.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:10%">
+        <h3 class="w3-bar-item"><span id="name">Menu</span></h3>
+        <a href="#" class="w3-bar-item w3-button" onclick="document.getElementById('id01').style.display='block'">Add
+            Table</a>
+        <div id="tables_names">
+            <a href="#" class="w3-bar-item w3-button">Link 1</a>
+            <a href="#" class="w3-bar-item w3-button">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button">Link 3</a>
+        </div>
+
+    </div>
+
+    <!-- Page Content -->
+    <div style="margin-left:10%">
+        <div class="w3-bar w3-border w3-light-grey">
+            <a href="#" class="w3-bar-item w3-button"><span id="page-title">Admin</span></a>
+            <a href="#" onclick="logout()" class="w3-bar-item w3-button w3-green w3-right">Logout</a>
+            <a href="/dashboard" class="w3-bar-item w3-button w3-green w3-right w3-margin-right">Dashboard</a>
+        </div>
+
+        <div class="w3-container w3-margin-top">
+            <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-green w3-right"
+                id="add-btn">Add Field</button>
+        </div>
+
+        <div id="myGrid" class="ag-theme-alpine w3-margin-top" style="height: 80vh; width:98%;margin: auto;"></div>
+    </div>
+
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom">
+            <div class="w3-container">
+                <span onclick="document.getElementById('id01').style.display='none'"
+                    class="w3-button w3-display-topright">&times;</span>
+                <div class="w3-margin">
+                    <div class="w3-container w3-green w3-margin-bottom">
+                        <h2>Create Table</h2>
+                    </div>
+                    <div>
+                        <label class="w3-text-green"><b>Table Name</b></label>
+                        <input class="w3-input w3-border w3-light-grey" type="text" id="new-table-name">
+                        <button onclick="createTable()" class="w3-btn w3-green w3-margin-top w3-round"
+                            style="width: 50%; margin-left: 25%;">
+                            Create
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="id02" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom">
+            <div class="w3-container">
+                <span onclick="document.getElementById('id02').style.display='none'"
+                    class="w3-button w3-display-topright">&times;</span>
+                <div class="w3-margin">
+                    <div class="w3-container w3-green w3-margin-bottom">
+                        <h2>Create Field</h2>
+                    </div>
+                    <div>
+                        <div class="w3-row-padding">
+                            <div class="w3-col m4">
+                                <input class="w3-input w3-border w3-light-grey" id="new-field-name" type="text" placeholder="Field Name">
+                            </div>
+                            <div class="w3-col m3">
+                                <select class="w3-select w3-border w3-light-grey" name="Field Type" id="new-field-type">
+                                    <option value="" disabled selected>Field Type</option>
+                                    <option value="text">Text</option>
+                                    <option value="phone">Phone</option>
+                                    <option value="email">Email</option>
+                                    <option value="dropdown">Dropdown</option>
+                                    <option value="table">Another Table</option>
+                                    <option value="users">Users</option>
+                                  </select>
+                            </div>
+                            <div class="w3-col m4">
+                                <input class="w3-input w3-border w3-light-grey" type="text" placeholder="Field Value" id="new-field-value">
+                            </div>
+                            <div class="w3-col m1">
+                                <button class="w3-button w3-circle w3-green">+</button>
+                            </div>
+                            
+                        </div>
+                        <button onclick="createField()" class="w3-btn w3-green w3-margin-top w3-round"
+                            style="width: 50%; margin-left: 25%;">
+                            Create Field
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="/static/jquery.min.js"></script>
+<script src="/static/sidebar.js"></script>
+<script src="/static/common_utils.js"></script>
+<script src="/static/custom_admin.js"></script>
+
+</html>
