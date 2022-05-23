@@ -1,0 +1,15 @@
+Save Data:
+
+python manage.py dumpdata core.ApiEndPoint --indent 4 > fixtures/ApiEndPoint.json
+python manage.py dumpdata core.Company --indent 4 > fixtures/Company.json
+python manage.py dumpdata core.Role --indent 4 > fixtures/Role.json
+python manage.py dumpdata auth.User --indent 4 > fixtures/users.json
+python manage.py dumpdata core.Profile --indent 4 > fixtures/Profile.json
+
+
+Load Data:
+python manage.py loaddata fixtures/users.json --app auth.User
+python manage.py loaddata fixtures/Company.json --app core.Company
+python manage.py loaddata fixtures/ApiEndPoint.json --app core.ApiEndPoint
+python manage.py loaddata fixtures/Role.json --app core.Role
+python manage.py loaddata fixtures/Profile.json --app core.Profile
