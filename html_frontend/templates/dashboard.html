@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACTIV CRM</title>
+    <link rel="stylesheet" href="/static/w3.css">
+    <link rel="stylesheet" href="/static/common.css">
+    <link rel="shortcut icon" href="/static/favicon.png" type="image/x-icon">
+
+    <script src="/static/ag-grid/ag-grid-community.min.noStyle.js"></script>
+    <link rel="stylesheet" href="/static/ag-grid/ag-grid.css">
+    <link rel="stylesheet" href="/static/ag-grid/ag-theme-alpine.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:10%">
+        <!-- username: Dynamically Updated via API  -->
+        <h3 class="w3-bar-item"><span id="name">Username</span></h3>
+        <!-- List of tables available/ table filters: Dynamically Updated via API  -->
+        <div id="tables_names">
+            <a href="#" class="w3-bar-item w3-button">Table 1</a>
+            <a href="#" class="w3-bar-item w3-button">Table 2</a>
+            <a href="#" class="w3-bar-item w3-button">Table 3</a>
+        </div>
+
+    </div>
+
+    <!-- Page Content -->
+    <div style="margin-left:10%">
+        <!-- Header  -->
+        <div class="w3-bar w3-border w3-light-grey">
+            <a href="#" class="w3-bar-item w3-button"><span id="page-title">Dashboard</span></a>
+            <a href="#" onclick="logout()" class="w3-bar-item w3-button w3-green w3-right">Logout</a>
+            <a href="/custom-admin" class="w3-bar-item w3-button w3-green w3-right w3-margin-right">Admin</a>
+        </div>
+        <!-- Add new row button  -->
+        <div class="w3-container w3-margin-top">
+            <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-green w3-right"
+                id="add-btn" style="display: none;">Add</button>
+        </div>
+        <!-- AG Grid Dyanamic Table: Dynamically Created via API   -->
+        <div id="myGrid" class="ag-theme-alpine w3-margin-top" style="height: 80vh; width:98%;margin: auto;"></div>
+    </div>
+
+    <!-- Add new row modal popup  -->
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom">
+            <div class="w3-container">
+                <span onclick="document.getElementById('id01').style.display='none'"
+                    class="w3-button w3-display-topright">&times;</span>
+                <div class="w3-margin">
+                    <div class="w3-container w3-green w3-margin-bottom">
+                        <h2>Add Row</h2>
+                    </div>
+                    <div id="add-modal">
+                        <label class="w3-text-green"><b>First Name</b></label>
+                        <input class="w3-input w3-border w3-light-grey" type="text">
+
+                        <label class="w3-text-green"><b>Last Name</b></label>
+                        <input class="w3-input w3-border w3-light-grey" type="text">
+
+                        <button class="w3-btn w3-green w3-margin-top w3-round"
+                            style="width: 50%; margin-left: 25%;">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- View and update row modal popup  -->
+    <div id="view-update-modal" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom">
+            <div class="w3-container">
+                <span onclick="document.getElementById('view-update-modal').style.display='none'"
+                    class="w3-button w3-display-topright">&times;</span>
+                <div class="w3-margin">
+                    <div class="w3-container w3-green w3-margin-bottom">
+                        <h2>View and Update Row</h2>
+                    </div>
+                    <div id="view-update-modal-content">
+                        <label class="w3-text-green"><b>First Name</b></label>
+                        <input class="w3-input w3-border w3-light-grey" type="text">
+
+                        <label class="w3-text-green"><b>Last Name</b></label>
+                        <input class="w3-input w3-border w3-light-grey" type="text">
+
+                        <button class="w3-btn w3-green w3-margin-top w3-round"
+                            style="width: 50%; margin-left: 25%;">Add</button>
+                    </div>
+                    <div class="w3-row">
+                        <div class="w3-half w3-center">
+                            <button onclick="updateRow()" class="w3-btn w3-green w3-margin-top w3-round" style="width: 50%;">Update</button>
+                        </div>
+                        <div class="w3-half  w3-center">
+                            <button onclick="document.getElementById('view-update-modal').style.display='none'" class="w3-btn w3-red w3-margin-top w3-round" style="width: 50%;">Cancle</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="/static/jquery.min.js"></script>
+<script src="/static/sidebar.js"></script>
+<script src="/static/common_utils.js"></script>
+<script src="/static/dashboard.js"></script>
+
+</html>
