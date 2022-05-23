@@ -1,0 +1,244 @@
+[
+{
+    "model": "core.apiendpoint",
+    "pk": 1,
+    "fields": {
+        "company": 1,
+        "created_date": "2022-04-26T19:25:06.975Z",
+        "modified_date": "2022-04-26T20:12:42.294Z",
+        "name": "create-company",
+        "url": "/crm/v1/create-company/"
+    }
+},
+{
+    "model": "core.apiendpoint",
+    "pk": 2,
+    "fields": {
+        "company": 1,
+        "created_date": "2022-04-26T19:26:25.379Z",
+        "modified_date": "2022-04-26T20:17:12.586Z",
+        "name": "list-company",
+        "url": "/crm/v1/list-company/"
+    }
+},
+{
+    "model": "core.apiendpoint",
+    "pk": 3,
+    "fields": {
+        "company": 1,
+        "created_date": "2022-04-26T19:26:55.319Z",
+        "modified_date": "2022-04-26T20:17:03.996Z",
+        "name": "retrieve-company",
+        "url": "/crm/v1/retrieve-company/"
+    }
+},
+{
+    "model": "core.apiendpoint",
+    "pk": 4,
+    "fields": {
+        "company": 1,
+        "created_date": "2022-04-26T19:27:09.116Z",
+        "modified_date": "2022-04-26T20:16:54.780Z",
+        "name": "update-company",
+        "url": "/crm/v1/update-company/"
+    }
+},
+{
+    "model": "core.apiendpoint",
+    "pk": 5,
+    "fields": {
+        "company": 1,
+        "created_date": "2022-04-26T19:27:22.166Z",
+        "modified_date": "2022-04-26T20:16:45.276Z",
+        "name": "delete-company",
+        "url": "/crm/v1/delete-company/"
+    }
+},
+{
+    "model": "core.apiendpoint",
+    "pk": 6,
+    "fields": {
+        "company": 1,
+        "created_date": "2022-04-26T19:27:33.385Z",
+        "modified_date": "2022-04-26T20:16:37.014Z",
+        "name": "create-table",
+        "url": "/crm/v1/create-table/"
+    }
+},
+{
+    "model": "core.apiendpoint",
+    "pk": 7,
+    "fields": {
+        "company": 1,
+        "created_date": "2022-04-26T19:27:45.952Z",
+        "modified_date": "2022-04-26T20:16:28.221Z",
+        "name": "list-table",
+        "url": "/crm/v1/list-table/"
+    }
+},
+{
+    "model": "core.apiendpoint",
+    "pk": 8,
+    "fields": {
+        "company": 1,
+        "created_date": "2022-04-26T19:27:58Z",
+        "modified_date": "2022-04-26T20:16:20.158Z",
+        "name": "retrieve-table",
+        "url": "/crm/v1/retrieve-table/"
+    }
+},
+{
+    "model": "core.apiendpoint",
+    "pk": 9,
+    "fields": {
+        "company": 1,
+        "created_date": "2022-04-26T19:28:09.207Z",
+        "modified_date": "2022-04-26T20:16:10.799Z",
+        "name": "update-table",
+        "url": "/crm/v1/update-table/"
+    }
+},
+{
+    "model": "core.apiendpoint",
+    "pk": 10,
+    "fields": {
+        "company": 1,
+        "created_date": "2022-04-26T19:28:20.489Z",
+        "modified_date": "2022-04-26T20:14:25.685Z",
+        "name": "delete-table",
+        "url": "/crm/v1/delete-table/"
+    }
+},
+{
+    "model": "core.apiendpoint",
+    "pk": 11,
+    "fields": {
+        "company": 1,
+        "created_date": "2022-04-26T19:28:32.470Z",
+        "modified_date": "2022-04-26T20:14:16.945Z",
+        "name": "create-fields",
+        "url": "/crm/v1/create-fields/"
+    }
+},
+{
+    "model": "core.apiendpoint",
+    "pk": 12,
+    "fields": {
+        "company": 1,
+        "created_date": "2022-04-26T19:28:44.842Z",
+        "modified_date": "2022-04-26T20:14:02.395Z",
+        "name": "list-fields",
+        "url": "/crm/v1/list-fields/"
+    }
+},
+{
+    "model": "core.apiendpoint",
+    "pk": 13,
+    "fields": {
+        "company": 1,
+        "created_date": "2022-04-26T19:28:55.813Z",
+        "modified_date": "2022-04-26T20:13:54.447Z",
+        "name": "retrieve-fields",
+        "url": "/crm/v1/retrieve-fields/"
+    }
+},
+{
+    "model": "core.apiendpoint",
+    "pk": 14,
+    "fields": {
+        "company": 1,
+        "created_date": "2022-04-26T19:29:07.381Z",
+        "modified_date": "2022-04-26T20:13:47.146Z",
+        "name": "update-fields",
+        "url": "/crm/v1/update-fields/"
+    }
+},
+{
+    "model": "core.apiendpoint",
+    "pk": 15,
+    "fields": {
+        "company": 1,
+        "created_date": "2022-04-26T19:29:19.072Z",
+        "modified_date": "2022-04-26T20:13:38.754Z",
+        "name": "delete-fields",
+        "url": "/crm/v1/delete-fields/"
+    }
+},
+{
+    "model": "core.apiendpoint",
+    "pk": 16,
+    "fields": {
+        "company": 1,
+        "created_date": "2022-04-26T19:29:32.391Z",
+        "modified_date": "2022-04-26T20:13:30.629Z",
+        "name": "admin",
+        "url": "/admin/"
+    }
+},
+{
+    "model": "core.apiendpoint",
+    "pk": 17,
+    "fields": {
+        "company": 1,
+        "created_date": "2022-04-26T19:29:56.801Z",
+        "modified_date": "2022-04-26T20:13:13.629Z",
+        "name": "api-token-auth",
+        "url": "/api-token-auth/"
+    }
+},
+{
+    "model": "core.apiendpoint",
+    "pk": 18,
+    "fields": {
+        "company": 1,
+        "created_date": "2022-04-26T19:30:06.039Z",
+        "modified_date": "2022-04-26T20:13:02.636Z",
+        "name": "health",
+        "url": "/health/"
+    }
+},
+{
+    "model": "core.apiendpoint",
+    "pk": 19,
+    "fields": {
+        "company": 1,
+        "created_date": "2022-05-21T13:24:28.362Z",
+        "modified_date": "2022-05-21T13:27:29.859Z",
+        "name": "table-data-list",
+        "url": "/crm/v1/table-data-list"
+    }
+},
+{
+    "model": "core.apiendpoint",
+    "pk": 20,
+    "fields": {
+        "company": 1,
+        "created_date": "2022-05-21T13:24:58.005Z",
+        "modified_date": "2022-05-21T13:27:23.630Z",
+        "name": "add-row",
+        "url": "/crm/v1/add-row"
+    }
+},
+{
+    "model": "core.apiendpoint",
+    "pk": 21,
+    "fields": {
+        "company": 1,
+        "created_date": "2022-05-21T13:31:34.892Z",
+        "modified_date": "2022-05-21T13:31:34.892Z",
+        "name": "delete-row",
+        "url": "/crm/v1/delete-row"
+    }
+},
+{
+    "model": "core.apiendpoint",
+    "pk": 22,
+    "fields": {
+        "company": 1,
+        "created_date": "2022-05-21T13:31:56.797Z",
+        "modified_date": "2022-05-21T13:31:56.797Z",
+        "name": "update-row",
+        "url": "/crm/v1/update-row"
+    }
+}
+]
